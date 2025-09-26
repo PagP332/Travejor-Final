@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+travejor-final-firebase-adminsdk-fbsvc-f57b98e27c.json
 
 # vercel
 .vercel
