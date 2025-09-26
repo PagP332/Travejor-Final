@@ -14,7 +14,7 @@ This submission was made using NextJS framework and Firestore.
 
 The choice for NextJS was simple, it provided a simple and easy integration of both frontend and backend functionality. Because of how Next works, it has a built-in API routes that could host its own REST API backend server, and with NextJS being implemented with ReactJS as well, could act as a full-stack framework. As well as myself having experience with using it.
 
-For Firestore, besides it being a recommended database, Google Firebase is already the most well-known and well-documented database storage, authentication, hosting, and backend service platform. Cloud Firestore specifically is a database storage service, that uses NoSQL, which is a non-relational database. Being it the most reliable backend service as well as having experience with it myself, it was the obvious choice.
+For Firestore, besides it being a recommended database, Google Firebase is already the most well-known and well-documented database storage, authentication, hosting, and backend service platform. Cloud Firestore specifically is a database storage service, that uses NoSQL, which is a non-relational database. Being it the most reliable backend service as well as having experience with it myself, it was the obvious choice. A more indepth explanation is given below
 
 Since NextJS has Vercel hosting support, the submission itself can be previewed both offline and online.
 
@@ -52,6 +52,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Backend
+The backend functionality consists of two things, the REST API endpoint service done and integrated within NextJS, and the database service by Firestore.
+
+All API endpoints and RESTful requests are within the src/app/api subdirectories.
+
+Firestore is a non-relational database, hence it is stored via documents and collections
+![alt text](readme/db.png)
+
+As shown above, the profile collections contains all profile documents, where in each document is named after its ID (is unique and can be auto-generated or user-generated). In it contains all the profile fields.
+
+Validation is done by the backend and is invoked before the API request.
+
 ## Sample API Requests
 
 ### Backend API Requirements
@@ -75,26 +87,29 @@ Profile fields:
 
 ### Examples
 Request: GET existing ID
+
 Expected Response: Status 200 and User information
 ![alt text](readme/image.png)
 
 Request: GET non-existent ID
+
 Expected Response: Status 404
 ![alt text](readme/image2.png)
 
 Request: POST new valid user
+
 Expected Response: Status 201
 ![alt text](readme/image3.png)
 
 Request: POST invalid user
+
 Expected Response: Status 400
 ![alt text](readme/image4.png)
 
 Request: PUT edit user content
+
 Expected Response: Status 200
 ![alt text](readme/image5.png)
 
 ## Notes
 Due to the limited time given, there were alot of shortcuts taken, such as lack of more thorough testing and edge-cases, as well as the rushed prototype created that does the job yet lacks aesthetics. The optional bonus points of having authentication protection on endpoints we're considered but was not developed in time. The project source code itself also may lack some thorough documentation.
-
-All server-side functions are in the src/app/api folder, including REST API endpoints and backend functionality
