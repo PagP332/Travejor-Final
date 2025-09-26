@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter, notFound } from "next/navigation"
 import React, { Suspense, useEffect, useState } from "react"
-import { parseString } from "../../parseString"
+import { parseArray, parseString } from "../../parseString"
 
 export default function ProfilePage() {
   const searchParams = useSearchParams()
@@ -36,7 +36,7 @@ export default function ProfilePage() {
       setInterests(profile.interests)
       setLocation(profile.location)
       setTempBio(profile.bio)
-      setTempInterests(profile.interests)
+      setTempInterests(parseArray(profile.interests))
       setTempLocation(profile.location)
     }
   }, [profile])
