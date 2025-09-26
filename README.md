@@ -75,6 +75,8 @@ The following are existing IDs that could be fetched:
 2. kg0T6rmUmqTBJ1GilJjU
 3. trav_123
 
+NOTE: The avatarUrl makes use of the picsum.photos API, which generates a random image. Images may or may not be always the same when reloading.
+
 ## Sample API Requests
 
 ### Backend API Requirements
