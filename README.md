@@ -113,3 +113,5 @@ Expected Response: Status 200
 
 ## Notes
 Due to the limited time given, there were alot of shortcuts taken, such as lack of more thorough testing and edge-cases, as well as the rushed prototype created that does the job yet lacks aesthetics. The optional bonus points of having authentication protection on endpoints we're considered but was not developed in time. The project source code itself also may lack some thorough documentation.
+
+Late Note: Had to rebuild the Firestore service as Google locked access to the project, and tried to troubleshoot it for an hour only to no avail and just had to rebuild the Firestore project all over again.
