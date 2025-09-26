@@ -1,6 +1,6 @@
-## Travejor - Backend Developer Coding Challenge
+# Travejor - Backend Developer Coding Challenge
 
-# Goal
+### Goal
 
 Build a small feature slice for traveler profiles consisting of:
 
@@ -12,13 +12,19 @@ Build a small feature slice for traveler profiles consisting of:
 
 This submission was made using NextJS framework and Firestore.
 
-The choice for NextJS was simple, it provided a simple and easy integration of both frontend and backend functionality. Because of how Next works, it has a built-in API routes that could host its own backend server, and with NextJS being implemented with ReactJS as well, could act as a full-stack framework. As well as myself having experience with using it.
+The choice for NextJS was simple, it provided a simple and easy integration of both frontend and backend functionality. Because of how Next works, it has a built-in API routes that could host its own REST API backend server, and with NextJS being implemented with ReactJS as well, could act as a full-stack framework. As well as myself having experience with using it.
 
 For Firestore, besides it being a recommended database, Google Firebase is already the most well-known and well-documented database storage, authentication, hosting, and backend service platform. Cloud Firestore specifically is a database storage service, that uses NoSQL, which is a non-relational database. Being it the most reliable backend service as well as having experience with it myself, it was the obvious choice.
 
 Since NextJS has Vercel hosting support, the submission itself can be previewed both offline and online.
 
-https://travejor-final.vercel.app
+### https://travejor-final.vercel.app
+
+## Environment Variables
+
+Although not recommended, this project contains an .env file.
+
+The environment variable is a private API key needed to connect to the Firestore API
 
 ## Getting Started
 
@@ -45,3 +51,50 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Sample API Requests
+
+### Backend API Requirements
+
+Endpoints (REST or GraphQL):
+
+- POST /profile → Create a new traveler profile
+- GET /profile/:id → Retrieve a traveler profile
+- PUT /profile/:id → Update a traveler profile
+
+Profile fields:
+
+- id (string or UUID)
+- username (string, unique if possible)
+- email (string)
+- bio (string)
+- interests (array of strings, e.g., ["hiking", "food", "trips"])
+- location (city, country)
+- avatarUrl (string, optional)
+- createdAt, updatedAt
+
+### Examples
+Request: GET existing ID
+Expected Response: Status 200 and User information
+![alt text](readme/image.png)
+
+Request: GET non-existent ID
+Expected Response: Status 404
+![alt text](readme/image2.png)
+
+Request: POST new valid user
+Expected Response: Status 201
+![alt text](readme/image3.png)
+
+Request: POST invalid user
+Expected Response: Status 400
+![alt text](readme/image4.png)
+
+Request: PUT edit user content
+Expected Response: Status 200
+![alt text](readme/image5.png)
+
+## Notes
+Due to the limited time given, there were alot of shortcuts taken, such as lack of more thorough testing and edge-cases, as well as the rushed prototype created that does the job yet lacks aesthetics. The optional bonus points of having authentication protection on endpoints we're considered but was not developed in time. The project source code itself also may lack some thorough documentation.
+
+All server-side functions are in the src/app/api folder, including REST API endpoints and backend functionality
