@@ -55,6 +55,7 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Backend
+
 The backend functionality consists of two things, the REST API endpoint service done and integrated within NextJS, and the database service by Firestore.
 
 All API endpoints and RESTful requests are within the src/app/api subdirectories.
@@ -65,6 +66,14 @@ Firestore is a non-relational database, hence it is stored via documents and col
 As shown above, the profile collections contains all profile documents, where in each document is named after its ID (is unique and can be auto-generated or user-generated). In it contains all the profile fields.
 
 Validation is done by the backend and is invoked before the API request.
+
+## Seed Profiles for Testing
+
+The following are existing IDs that could be fetched:
+
+1. 1000
+2. kg0T6rmUmqTBJ1GilJjU
+3. trav_123
 
 ## Sample API Requests
 
@@ -88,6 +97,7 @@ Profile fields:
 - createdAt, updatedAt
 
 ### Examples
+
 Request: GET existing ID
 
 Expected Response: Status 200 and User information
@@ -114,6 +124,7 @@ Expected Response: Status 200
 ![alt text](readme/image5.png)
 
 ## Notes
+
 Due to the limited time given, there were alot of shortcuts taken, such as lack of more thorough testing and edge-cases, as well as the rushed prototype created that does the job yet lacks aesthetics. The optional bonus points of having authentication protection on endpoints we're considered but was not developed in time. The project source code itself also may lack some thorough documentation.
 
 Late Note: Had to rebuild the Firestore service as Google locked access to the project, and tried to troubleshoot it for an hour only to no avail and just had to rebuild the Firestore project all over again.
