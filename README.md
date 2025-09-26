@@ -22,9 +22,11 @@ Since NextJS has Vercel hosting support, the submission itself can be previewed 
 
 ## Environment Variables
 
-Although not recommended, this project contains an .env file.
+As per best practices and Google policy, this project does not contain an .env file.
 
-The environment variable is a private API key needed to connect to the Firestore API
+The environment variable is a private API key needed to connect to the Firestore API.
+
+If you have access to the given .env file, it should be within the root directory of the repository
 
 ## Getting Started
 
